@@ -1,0 +1,25 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Растягиваем на всю высоту экрана */
+}
+
+.main-content {
+  flex: 1; /* Контент занимает все пространство между хедером и футером */
+}
+
+/* Общие стили для кнопок, которые встречаются везде */
+.btn-primary-large {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary-large:hover {
+  background-color: #1c86ee;
+}

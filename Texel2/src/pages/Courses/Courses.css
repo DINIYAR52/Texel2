@@ -1,0 +1,178 @@
+.courses-page {
+  padding: 40px 0 80px;
+  background-color: #fff;
+}
+
+/* Hero Section */
+.courses-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.course-results {
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.results-line {
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
+}
+
+/* Ovals */
+.target-ovals {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0 80px;
+}
+
+.target-oval {
+  padding: 20px 40px;
+  border-radius: 100px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-blue-oval { background-color: #3e4999; }
+.blue-oval { background-color: #6fbfff; }
+.light-blue-oval { background-color: #31a5ff; }
+
+/* Outcomes */
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+
+.outcome-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.check-icon-green {
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+/* Modules */
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.module-card {
+  border: 2px solid #31a5ff;
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.module-card:hover {
+  background: #f0f8ff;
+  transform: translateX(10px);
+}
+
+.module-card h4 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.module-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Pricing Circles */
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.price-circle {
+  width: 320px;
+  height: 320px;
+  border: 2px solid #31a5ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.price-circle.featured {
+  background: #31a5ff;
+  color: white;
+}
+
+.price-circle.featured ul li {
+  color: #fff;
+}
+
+.price-content h5 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.price-content ul {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  text-align: left;
+}
+
+.price-content li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Контейнер для управления размером и выравниванием */
+.courses-hero__image-wrapper {
+  display: flex;
+  justify-content: center; /* Центрируем картинку */
+  margin: 0 auto 30px;    /* Отступы: сверху/снизу и авто по бокам */
+  max-width: 700px;        /* Тот самый параметр! Уменьшите до 500px, если нужно еще меньше */
+  width: 100%;
+}
+
+/* Стили самой картинки внутри контейнера */
+.courses-hero__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .outcomes-grid, .pricing-grid, .target-ovals {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+  }
+  .price-circle {
+    width: 280px;
+    height: 280px;
+  }
+}

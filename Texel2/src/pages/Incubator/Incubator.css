@@ -1,0 +1,176 @@
+.incubator-page {
+  padding: 40px 0 80px;
+  background-color: #fff;
+}
+
+/* Hero Actions */
+.incubator-hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.btn-secondary-large {
+  background-color: transparent;
+  color: #1e90ff;
+  border: 2px solid #1e90ff;
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Workflow line */
+.workflow-summary {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.workflow-line {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.workflow-arrow {
+  margin: 0 15px;
+  color: #ccc;
+}
+
+/* Stages (Ovals) */
+.stages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stage-oval {
+  padding: 40px;
+  border-radius: 100px; /* Эффект овала */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 220px;
+}
+
+.stage-oval h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.stage-oval ul {
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.stage-oval li { margin-bottom: 5px; }
+
+.stage-oval--dark { background-color: #3e4999; }
+.stage-oval--blue { background-color: #31a5ff; }
+.stage-oval--light { background-color: #5bb9ff; }
+.stage-oval--deep { background-color: #2a347a; }
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-box {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.benefit-number {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Experts */
+.experts-main-image img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.experts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.expert-card {
+  padding: 30px;
+  border-radius: 15px;
+  background: #f8f9fa;
+  text-align: left;
+}
+
+.expert-card--blue {
+  background-color: #31a5ff;
+  color: white;
+}
+
+.expert-name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.expert-role {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+.expert-info {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Selection Steps */
+.steps-list {
+  margin-top: 30px;
+}
+
+.step {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  border-left: 4px solid #1e90ff;
+}
+
+/* Контейнер для управления размером и выравниванием */
+.incubator-hero__image-wrapper {
+  display: flex;
+  justify-content: center; /* Центрируем картинку */
+  margin: 0 auto 30px;    /* Отступы: сверху/снизу и авто по бокам */
+  max-width: 700px;        /* Тот самый параметр! Уменьшите до 500px, если нужно еще меньше */
+  width: 100%;
+}
+
+/* Стили самой картинки внутри контейнера */
+.incubator-hero__img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .stages-grid, .benefits-grid, .experts-grid {
+    grid-template-columns: 1fr;
+  }
+  .stage-oval {
+    border-radius: 40px;
+  }
+}

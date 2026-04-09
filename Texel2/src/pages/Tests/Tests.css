@@ -1,0 +1,195 @@
+/* Основные настройки страницы */
+.tests-page {
+  text-align: center;
+  /* ✅ Увеличенный отступ от футера для всех состояний страницы */
+  padding-bottom: 150px; 
+  color: #1a2b4b;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Заголовки */
+.page-title {
+  font-size: 42px;
+  margin: 80px 0 30px;
+  font-weight: 700;
+}
+
+.page-description {
+  font-size: 20px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+/* Общий контейнер для кнопок действий */
+.test-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* Дополнительный отступ на случай короткого контента */
+  margin-bottom: 50px; 
+}
+
+/* Унифицированная кнопка */
+.btn-primary-large {
+  padding: 18px 42px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: #31a5ff;
+  color: white !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-block;
+  line-height: 1;
+}
+
+.btn-primary-large:hover:not(:disabled) {
+  transform: scale(1.05);
+  background-color: #1e8cdb;
+  box-shadow: 0 8px 20px rgba(49, 165, 255, 0.3);
+}
+
+.btn-primary-large:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.btn-primary-large:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Блок вопросов (Quiz) */
+.test-quiz-box {
+  margin-top: 40px;
+}
+
+.quiz-steps {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.quiz-question {
+  font-size: 26px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: left;
+}
+
+/* Стили вариантов ответов */
+.quiz-option {
+  display: flex;
+  align-items: center;
+  padding: 22px 28px;
+  border: 2px solid #eef2f6;
+  border-radius: 16px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 17px;
+}
+
+.quiz-option:hover {
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}
+
+.quiz-option.active {
+  border-color: #31a5ff;
+  background-color: #f0f7ff;
+  box-shadow: 0 4px 12px rgba(49, 165, 255, 0.1);
+}
+
+.quiz-circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quiz-option.active .quiz-circle {
+  border-color: #31a5ff;
+  background-color: #31a5ff;
+}
+
+.quiz-check-icon {
+  color: white;
+}
+
+/* --- Результаты --- */
+.result-status-title {
+  color: #31a5ff;
+  font-size: 34px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.result-text {
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  color: #334155;
+}
+
+.result-next-steps {
+  background-color: #31a5ff;
+  color: white;
+  padding: 40px;
+  border-radius: 24px;
+  text-align: left;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.result-next-steps h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.result-next-steps li {
+  margin-bottom: 18px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* ✅ Контейнер кнопки в конце результата с отступом от низа */
+.test-result__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  /* ✅ Гарантирует, что кнопка не будет вплотную к футеру */
+  margin-bottom: 40px; 
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .page-title { font-size: 32px; margin: 40px 0 20px; }
+  .tests-page { padding-bottom: 80px; }
+  .btn-primary-large { width: 100%; text-align: center; }
+}

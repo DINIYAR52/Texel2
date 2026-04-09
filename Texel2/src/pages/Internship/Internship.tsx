@@ -1,4 +1,6 @@
 import React from 'react';
+// ✅ Добавили Link для навигации
+import { Link } from 'react-router-dom'; 
 import { CheckCircle2, Calendar, Users, Briefcase, GraduationCap } from 'lucide-react';
 import './Internship.css';
 
@@ -20,10 +22,14 @@ const Internship: React.FC = () => {
                 className="internship-hero__img" 
               />
             </div>
-            <button className="btn-primary-large">Подать заявку</button>
+            {/* ✅ ЗАМЕНИЛИ <button> НА <Link> И ДОБАВИЛИ АКТИВНЫЙ СТИЛЬ */}
+            <Link to="/apply" className="btn-primary-large internship-btn">
+              Подать заявку
+            </Link>
           </div>
         </section>
 
+        {/* --- ВЕСЬ ОСТАЛЬНОЙ КОД БЕЗ ИЗМЕНЕНИЙ --- */}
         {/* Для кого эта стажировка */}
         <section className="for-whom">
           <h2 className="section-title">Для кого эта стажировка</h2>
@@ -45,7 +51,7 @@ const Internship: React.FC = () => {
           <h2 className="section-title">Структура программы</h2>
           <div className="structure-grid">
             <div className="structure-item">
-              <h4>🎓 БАЗОВАЯ ПОДГОТОВКА (2 недели)</h4>
+              <h4> БАЗОВАЯ ПОДГОТОВКА (2 недели)</h4>
               <ul>
                 <li>Основы ChatGPT: промптинг, API, best practices</li>
                 <li>Знакомство с DeepSeek: архитектура, возможности</li>
@@ -54,7 +60,7 @@ const Internship: React.FC = () => {
               </ul>
             </div>
             <div className="structure-item">
-              <h4>🛠 РЕАЛЬНЫЕ ПРОЕКТЫ (8 недель)</h4>
+              <h4> РЕАЛЬНЫЕ ПРОЕКТЫ (8 недель)</h4>
               <ul>
                 <li>Работа в команде над задачами Texel</li>
                 <li>Интеграция ИИ-модулей в продукты</li>
@@ -63,7 +69,7 @@ const Internship: React.FC = () => {
               </ul>
             </div>
             <div className="structure-item">
-              <h4>👑 МЕНТОРСТВО (весь период)</h4>
+              <h4> МЕНТОРСТВО (весь период)</h4>
               <ul>
                 <li>Персональный ментор из команды Texel</li>
                 <li>Регулярные 1:1 сессии</li>
@@ -72,7 +78,7 @@ const Internship: React.FC = () => {
               </ul>
             </div>
             <div className="structure-item">
-              <h4>🚀 ФИНАЛЬНЫЙ ПРОЕКТ (2 недели)</h4>
+              <h4> ФИНАЛЬНЫЙ ПРОЕКТ (2 недели)</h4>
               <ul>
                 <li>Разработка собственного AI-проекта</li>
                 <li>Презентация результата руководству</li>

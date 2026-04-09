@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Добавили Link для навигации
 import { Lightbulb, Rocket, Zap, Shield, ChevronRight } from 'lucide-react';
 import './Incubator.css';
 
@@ -11,8 +12,10 @@ const Incubator: React.FC = () => {
         {/* Hero Section */}
         <section className="incubator-hero">
           <div className="incubator-hero__content">
+            {/* Текст теперь ВЫШЕ картинки */}
             <h2>Запустите свой ИИ-стартап с поддержкой Texel</h2>
             <p>От идеи до работающего бизнеса: ресурсы, экспертиза и инвестиции для вашего проекта</p>
+            
             <div className="incubator-hero__image-wrapper">
               <img 
                 src="/assets/Incubator.png" 
@@ -20,9 +23,13 @@ const Incubator: React.FC = () => {
                 className="incubator-hero__img" 
               />
             </div>
+
             <div className="incubator-hero__actions">
-              <button className="btn-primary-large">Подать заявку</button>
-              <button className="btn-secondary-large">Смотреть кейсы</button>
+              {/* Используем Link вместо button для переходов */}
+              <Link to="/apply" className="btn-primary-large">Подать заявку</Link>
+              <Link to="/cases" className="btn-secondary-large">Смотреть кейсы</Link>
+              {/* Новая кнопка "Пройти тест" */}
+              <Link to="/tests" className="btn-secondary-large">Пройти тест</Link>
             </div>
           </div>
         </section>
@@ -30,13 +37,13 @@ const Incubator: React.FC = () => {
         {/* Workflow Summary */}
         <section className="workflow-summary">
           <div className="workflow-line">
-            <span className="workflow-item">💡 Идея</span>
+            <span className="workflow-item"> Идея</span>
             <span className="workflow-arrow">→</span>
-            <span className="workflow-item">🛠 Прототип</span>
+            <span className="workflow-item"> Прототип</span>
             <span className="workflow-arrow">→</span>
-            <span className="workflow-item">🚀 Продукт</span>
+            <span className="workflow-item"> Продукт</span>
             <span className="workflow-arrow">→</span>
-            <span className="workflow-item">📈 Бизнес</span>
+            <span className="workflow-item"> Бизнес</span>
           </div>
         </section>
 
@@ -125,7 +132,7 @@ const Incubator: React.FC = () => {
               <div className="expert-info">Предприниматель, специалист по развитию бизнеса и стратегии масштабирования.</div>
             </div>
             <div className="expert-card">
-              <div className="expert-name">Максим Федоков</div>
+              <div className="expert-name">Максим Федюков</div>
               <div className="expert-role">CLO</div>
               <div className="expert-info">Юрист в сфере технологий, специалист по защите интеллектуальной собственности.</div>
             </div>

@@ -9,6 +9,7 @@ import Courses from './pages/Courses/Courses';
 import Chatbot from './pages/Chatbot/Chatbot';
 import Registration from './pages/Forms/Registration';
 import Application from './pages/Forms/Application';
+import Tests from './pages/Tests/Tests';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/apply" element={<Application />} />
+          <Route path="/tests" element={<Tests />} />
         </Routes>
       </main>
       <Footer />

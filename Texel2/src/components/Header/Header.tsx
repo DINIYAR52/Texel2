@@ -19,6 +19,8 @@ const Header: React.FC = () => {
             <NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>О центре</NavLink>
             <NavLink to="/internship" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Стажировка</NavLink>
             <NavLink to="/incubator" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Инкубатор</NavLink>
+            {/* Добавлена только эта строка */}
+            <NavLink to="/tests" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Тесты</NavLink>
             <NavLink to="/courses" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Курсы</NavLink>
             <NavLink to="/chatbot" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Чат-бот</NavLink>
           </nav>

@@ -10,6 +10,7 @@ import Chatbot from './pages/Chatbot/Chatbot';
 import Registration from './pages/Forms/Registration';
 import Application from './pages/Forms/Application';
 import Tests from './pages/Tests/Tests';
+import Cases from './pages/Cases/Cases';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/apply" element={<Application />} />
           <Route path="/tests" element={<Tests />} />
+          <Route path="/cases" element={<Cases />} />
         </Routes>
       </main>
       <Footer />

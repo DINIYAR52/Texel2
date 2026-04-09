@@ -1,0 +1,84 @@
+.cases-page {
+  padding-bottom: 120px;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Карточка кейса */
+.case-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #eef2f6;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.case-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(49, 165, 255, 0.12);
+}
+
+/* Область изображения */
+.case-image-wrapper {
+  height: 200px;
+  background-color: #f0f7ff; /* Светлый фон как в инкубаторе */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.case-placeholder {
+  color: #31a5ff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Текстовый контент */
+.case-content {
+  padding: 25px;
+}
+
+.case-category {
+  display: inline-block;
+  background: rgba(49, 165, 255, 0.1);
+  color: #31a5ff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.case-title {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #1a2b4b;
+}
+
+.case-text {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.case-more-btn {
+  background: none;
+  border: none;
+  color: #31a5ff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.case-more-btn:hover {
+  color: #1e8cdb;
+}

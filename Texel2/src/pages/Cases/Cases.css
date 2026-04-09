@@ -1,84 +1,133 @@
+/* Основные настройки страницы */
 .cases-page {
-  padding-bottom: 120px;
+  text-align: center;
+  /* Увеличенный отступ от Footer для визуальной легкости */
+  padding-bottom: 150px; 
+  color: #1a2b4b;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Заголовки страницы */
+.page-title {
+  font-size: 42px;
+  margin: 80px 0 30px;
+  font-weight: 700;
+}
+
+.page-description {
+  font-size: 20px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+/* Сетка карточек кейсов */
 .cases-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
 
-/* Карточка кейса */
+/* Стили карточки */
 .case-card {
   background: #ffffff;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
   border: 1px solid #eef2f6;
   transition: all 0.3s ease;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .case-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(49, 165, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(49, 165, 255, 0.12);
 }
 
-/* Область изображения */
+/* Область изображения/заполнителя */
 .case-image-wrapper {
-  height: 200px;
-  background-color: #f0f7ff; /* Светлый фон как в инкубаторе */
+  height: 240px;
+  background-color: #f0f7ff;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .case-placeholder {
   color: #31a5ff;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-/* Текстовый контент */
+/* Контент внутри карточки */
 .case-content {
-  padding: 25px;
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Теги категорий */
 .case-category {
   display: inline-block;
   background: rgba(49, 165, 255, 0.1);
   color: #31a5ff;
-  padding: 5px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  align-self: flex-start;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .case-title {
-  font-size: 22px;
-  margin-bottom: 12px;
+  font-size: 24px;
+  margin-bottom: 15px;
   color: #1a2b4b;
+  font-weight: 700;
 }
 
 .case-text {
-  font-size: 15px;
+  font-size: 16px;
   color: #64748b;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* Ссылка "Подробнее" */
 .case-more-btn {
   background: none;
   border: none;
   color: #31a5ff;
   font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
   padding: 0;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
 }
 
 .case-more-btn:hover {
   color: #1e8cdb;
+  text-decoration: underline;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .page-title { font-size: 32px; }
+  .cases-page { padding-bottom: 100px; }
+  .cases-grid { grid-template-columns: 1fr; }
 }
